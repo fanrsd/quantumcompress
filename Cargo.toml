@@ -1,0 +1,57 @@
+[package]
+name = "quantum-compress"
+version = "0.1.0"
+edition = "2021"
+description = "QuantumCompress — Ultra-powerful adaptive hybrid file compression engine"
+license = "MIT"
+authors = ["QuantumCompress Team"]
+readme = "README.md"
+
+[[bin]]
+name = "qc"
+path = "src/main.rs"
+
+[dependencies]
+# Compression engines
+xz2 = "0.1"                    # LZMA2 via liblzma (best ratio)
+zstd = "0.13"                   # Zstandard (best speed/ratio tradeoff)
+flate2 = "1"                    # Deflate (for recompression pipeline)
+
+# Hashing & integrity
+blake3 = "1"                    # BLAKE3 fast cryptographic hash (per-file)
+sha2 = "0.10"                   # SHA-256 (archive-level integrity)
+crc32fast = "1"                 # Fast CRC32 (per-block quick check)
+digest = "0.10"                 # Common digest traits
+
+# Parallelism
+rayon = "1"                     # Data-parallel block compression
+num_cpus = "1"                  # Detect available CPU cores
+
+# CLI & UX
+clap = { version = "4", features = ["derive"] }
+indicatif = "0.17"              # Progress bars
+console = "0.15"                # Terminal styling
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+bincode = "1"                   # Fast binary serialization for metadata
+byteorder = "1"                 # Byte order utilities
+
+# File system
+walkdir = "2"                   # Recursive directory traversal
+
+# Error handling
+thiserror = "1"                 # Derive Error trait
+
+# Logging
+log = "0.4"
+env_logger = "0.10"
+
+[dev-dependencies]
+tempfile = "3"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
