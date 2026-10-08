@@ -11,6 +11,10 @@ readme = "README.md"
 name = "qc"
 path = "src/main.rs"
 
+[[bin]]
+name = "qc-gui"
+path = "src/gui.rs"
+
 [dependencies]
 # Compression engines
 xz2 = "0.1"                    # LZMA2 via liblzma (best ratio)
@@ -46,6 +50,8 @@ thiserror = "1"                 # Derive Error trait
 # Logging
 log = "0.4"
 env_logger = "0.10"
+eframe = "0.35.0"
+rfd = "0.17.2"
 
 [dev-dependencies]
 tempfile = "3"

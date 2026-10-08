@@ -15,6 +15,7 @@
 - **Delta Preprocessing Filter**: Automatic detection and byte-difference encoding for continuous/sensor/media streams to maximize compression.
 - **Bounded-Memory Streaming**: Compresses and decompresses multi-gigabyte files with bounded RAM usage via chunked batch streaming.
 - **Multi-Core Parallelism**: Powered by **Rayon**, automatically distributes block-level compression across all available CPU threads.
+- **Desktop GUI Application (`qc-gui`)**: Native GPU-accelerated interface (eframe/egui) with Drag-and-Drop, multi-tab archive management, inspection tables, and benchmark tools.
 - **Zero-Error Data Integrity (4-Layer)**:
   1. **Block Layer**: Hardware-accelerated CRC32 per block.
   2. **File Layer**: 256-bit BLAKE3 cryptographic hash per file.
@@ -31,12 +32,28 @@ QuantumCompress is written in 100% memory-safe Rust:
 # Clone and enter workspace
 cd e:\PROJECTS\IoT\QuantumCompress
 
-# Build optimized release binary
+# Build optimized release binaries (CLI + GUI)
 cargo build --release
 
-# The executable will be available at:
-./target/release/qc.exe
+# The executables will be available at:
+# CLI: ./target/release/qc.exe
+# GUI: ./target/release/qc-gui.exe
 ```
+
+---
+
+## 🖥️ Graphical User Interface (GUI)
+
+You can launch the GUI in 3 easy ways:
+1. Double-click **`target\release\qc-gui.exe`** directly from Windows Explorer.
+2. Run `qc gui` from the terminal.
+3. Simply double-click **`qc.exe`** without arguments (it will automatically launch the GUI).
+
+### GUI Features:
+- 🗜️ **Buat Arsip**: Drag & Drop multiple files or folders, profile picker (Turbo ➔ Quantum), real-time progress & size savings.
+- 📂 **Ekstrak Arsip**: Pick any `.qcx` file, preview archive info, and extract to any destination.
+- 🔍 **Lihat & Uji Arsip**: Inspect file table, block counts, and run one-click bit-exact integrity tests.
+- ⚡ **Benchmark Profil**: Test and compare performance across profiles on any data.
 
 ---
 

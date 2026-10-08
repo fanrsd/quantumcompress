@@ -85,9 +85,26 @@ enum Commands {
         #[arg(required = true)]
         input: PathBuf,
     },
+
+    /// Launch the QuantumCompress desktop GUI
+    #[command(alias = "g")]
+    Gui,
 }
 
 fn main() {
+    // If double-clicked or run without arguments, try launching GUI
+    if std::env::args().len() == 1 {
+        if let Ok(current_exe) = std::env::current_exe() {
+            let dir = current_exe.parent().unwrap_or_else(|| std::path::Path::new("."));
+            let gui_exe = dir.join("qc-gui.exe");
+            if gui_exe.exists() {
+                if std::process::Command::new(&gui_exe).spawn().is_ok() {
+                    return;
+                }
+            }
+        }
+    }
+
     let cli = Cli::parse();
 
     let result = run_command(cli);
@@ -160,6 +177,19 @@ fn run_command(cli: Cli) -> QCResult<()> {
         }
 
         Commands::Bench { input } => run_bench(&input),
+
+        Commands::Gui => {
+            let current_exe = std::env::current_exe()?;
+            let dir = current_exe.parent().unwrap_or_else(|| std::path::Path::new("."));
+            let gui_exe = dir.join("qc-gui.exe");
+            if gui_exe.exists() {
+                println!("{} Meluncurkan QuantumCompress Desktop GUI...", style("🚀").bold());
+                std::process::Command::new(&gui_exe).spawn()?;
+            } else {
+                std::process::Command::new("qc-gui").spawn()?;
+            }
+            Ok(())
+        }
     }
 }
 
