@@ -3,7 +3,7 @@ name = "quantum-compress"
 version = "0.1.0"
 edition = "2021"
 description = "QuantumCompress — Ultra-powerful adaptive hybrid file compression engine"
-license = "MIT"
+license = "MIT OR Apache-2.0"
 authors = ["QuantumCompress Team"]
 readme = "README.md"
 

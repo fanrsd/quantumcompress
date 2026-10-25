@@ -5,7 +5,7 @@
 [![Rust](https://img.shields.io/badge/rust-1.93%2B-orange.svg)](https://www.rust-lang.org)
 [![Format](https://img.shields.io/badge/format-.qcx%20v1-blue.svg)](#archive-format-qcx)
 [![Integrity](https://img.shields.io/badge/integrity-4--layer-brightgreen.svg)](#4-layer-integrity-guarantee)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: MIT OR Apache-2.0](https://img.shields.io/badge/License-MIT%20OR%20Apache--2.0-blue.svg)](LICENSE-MIT)
 
 ---
 
