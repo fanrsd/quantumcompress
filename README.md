@@ -1,3 +1,7 @@
+<div align="center">
+  <img src=".github/assets/banner.svg" alt="quantumcompress — Adaptive compressor routing blocks between LZMA2 and Zstandard." width="100%">
+</div>
+
 # 🗜️ QuantumCompress (`qc`)
 
 > **Ultra-powerful adaptive hybrid file compressor** built for maximum compression density, multi-threaded performance, and zero-error data integrity.

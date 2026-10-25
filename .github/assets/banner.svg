@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="quantumcompress">
+<defs>
+<radialGradient id="g1" cx="88%" cy="105%" r="75%"><stop offset="0" stop-color="#24157a" stop-opacity=".6"/><stop offset="1" stop-color="#24157a" stop-opacity="0"/></radialGradient>
+<radialGradient id="g2" cx="2%" cy="-10%" r="55%"><stop offset="0" stop-color="#5fe0f0" stop-opacity=".10"/><stop offset="1" stop-color="#5fe0f0" stop-opacity="0"/></radialGradient>
+<linearGradient id="live" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7a1a" stop-opacity=".45"/><stop offset=".55" stop-color="#24157a" stop-opacity=".55"/><stop offset="1" stop-color="#5fe0f0" stop-opacity=".22"/></linearGradient>
+</defs>
+<rect width="1200" height="300" fill="#000"/>
+<rect width="1200" height="300" fill="url(#g1)"/>
+<rect width="1200" height="300" fill="url(#g2)"/>
+<rect x="748" y="42" width="412" height="216" rx="18" fill="#07070a" fill-opacity=".72" stroke="#24157a"/>
+<circle cx="78" cy="90" r="4" fill="#5fe0f0"><animate attributeName="opacity" values="1;.25;1" dur="2.4s" repeatCount="indefinite"/></circle>
+<text x="92" y="96" font-family="Consolas,monospace" font-size="17" fill="#5fe0f0">fanrsd/quantumcompress</text>
+<text x="70" y="152" font-family="'Segoe UI',system-ui,sans-serif" font-size="52" font-weight="700" fill="#f2f3ee">quantumcompress</text>
+<rect x="70" y="170" width="64" height="5" rx="2.5" fill="#ff7a1a"/>
+<text x="70" y="210" font-family="'Segoe UI',system-ui,sans-serif" font-size="21" fill="#9aa0a6">Adaptive compressor routing blocks between LZMA2 and Zstandard.</text>
+<rect x="70" y="238" width="66" height="30" rx="15" fill="#0b0b0c" stroke="#2c2c2e"/><circle cx="86" cy="253" r="5" fill="#dea584"/><text x="99" y="259" font-family="Consolas,monospace" font-size="15" fill="#cfd2cb">Rust</text><rect x="145.6" y="238" width="66" height="30" rx="15" fill="#0b0b0c" stroke="#2c2c2e"/><circle cx="161.6" cy="253" r="5" fill="#5fe0f0"/><text x="174.6" y="259" font-family="Consolas,monospace" font-size="15" fill="#cfd2cb">egui</text>
+
+<rect x="770" y="80" width="70" height="30" rx="6" fill="#0d0d10" stroke="#2c2c2e"/><rect x="780" y="89" width="50" height="4" rx="2" fill="#3a3a42"/>
+<rect x="770" y="122" width="70" height="30" rx="6" fill="#0d0d10" stroke="#2c2c2e"/><rect x="780" y="131" width="50" height="4" rx="2" fill="#3a3a42"/>
+<rect x="770" y="164" width="70" height="30" rx="6" fill="#0d0d10" stroke="#2c2c2e"/><rect x="780" y="173" width="50" height="4" rx="2" fill="#3a3a42"/>
+<path d="M844 95 h50" stroke="#3a3a42" stroke-width="2"/><path d="M844 137 h20 l30 -41" stroke="#3a3a42" stroke-width="2" fill="none"/><path d="M844 179 h20 l30 41" stroke="#3a3a42" stroke-width="2" fill="none"/>
+<path d="M890 92 l8 3 -8 3 z" fill="#3a3a42"/><path d="M890 96 l8 3 -8 3 z" fill="#3a3a42"/><path d="M890 171 l8 3 -8 3 z" fill="#3a3a42"/>
+<rect x="900" y="70" width="104" height="52" rx="10" fill="#150c3a" stroke="#24157a"/>
+<text x="918" y="102" font-family="Consolas,monospace" font-size="15" fill="#c9c4ff">LZMA2</text>
+<rect x="900" y="142" width="104" height="52" rx="10" fill="#072a2e" stroke="#5fe0f0" stroke-opacity=".55"/>
+<text x="922" y="174" font-family="Consolas,monospace" font-size="15" fill="#8ef0f8">ZSTD</text>
+<path d="M1008 96 h26" stroke="#3a3a42" stroke-width="2"/><path d="M1008 168 h26 l0 -46" stroke="#3a3a42" stroke-width="2" fill="none"/>
+<rect x="1040" y="106" width="92" height="52" rx="10" fill="#0d0d10" stroke="#ff7a1a" stroke-opacity=".6"/>
+<text x="1056" y="138" font-family="Consolas,monospace" font-size="15" fill="#ff9d55">OUT</text>
+<text x="770" y="222" font-family="Consolas,monospace" font-size="12" fill="#6c6f74">route by entropy, block by block</text>
+</svg>
