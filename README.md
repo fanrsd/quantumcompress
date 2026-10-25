@@ -162,3 +162,7 @@ qc bench ./my_dataset
 2. **BLAKE3 Per-File Verification**: Every reconstructed file is streamed into a 256-bit BLAKE3 hasher and compared against the recorded signature.
 3. **SHA-256 Trailer**: Validates the overall archive file against corruption or tampering.
 4. **Immediate Round-Trip Validation**: Every `qc compress` operation automatically runs an end-to-end verification pass before exiting.
+
+## License
+
+Licensed under either of [MIT](LICENSE-MIT) or [Apache-2.0](LICENSE-APACHE) at your option.
